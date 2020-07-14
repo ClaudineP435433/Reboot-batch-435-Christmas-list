@@ -6,7 +6,7 @@ puts "-"*30
 
 GIFTS = [
   {name: "MacBook pro", price: 1350 , bought: false},
-  {name: "Key Ring", price: 3 , bought: false},
+  {name: "Key Ring", price: 3 , bought: true},
   {name: "Bottle Opener", price: 13 , bought: false}
 ]
 
