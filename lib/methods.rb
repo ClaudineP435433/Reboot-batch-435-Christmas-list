@@ -11,9 +11,17 @@ def display_menu
 end
 
 def display_gifts(gifts)
+  # Display gift list
+  # Iteration sur gifts (Tableau de Hash)
+  # 1 - MacBook - 1350€ [X]
+  # 2 - MacBook - 1350€ [ ]
 end
 
 def add_gifts(gifts)
+  # Ask User Gift Details
+  # Store details
+  # Create a variable gift with format hash
+  # Ajouter le gift dans gifts
 end
 
 def delete_gift(gifts)
