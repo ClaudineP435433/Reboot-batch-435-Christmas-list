@@ -1,5 +1,5 @@
 # require 'csv'
-# require_relative 'scrapper'
+require_relative 'scrapper'
 # require_relative 'interface'
 
 def display_menu
@@ -8,6 +8,7 @@ def display_menu
   puts "2 - Add a gift"
   puts "3 - Delete a gift"
   puts "4 - Mark as bought"
+  puts "5 - Find Ideas in etsy"
   puts "0 - Exit"
 end
 
@@ -68,8 +69,17 @@ end
 
 def ideas_etsy(gifts)
   # Ask User Keyword
+  puts "What are you looking for ?"
+  keyword = gets.chomp
   # Scrap with keyword
+  ideas = scrap(keyword)
   # Display ideas
+  display_gifts(ideas)
   # Ask User to Choose the idea he wants to add / index
+  puts "Select the idea you want to add"
+  index = gets.chomp.to_i - 1
   # Add gift_idea to gifts
+  gift_to_add = ideas[index]
+  gifts << gift_to_add
+  display_gifts(gifts)
 end
