@@ -20,6 +20,7 @@ loop do
   when '2' then add_gifts(GIFTS)
   when '3' then delete_gift(GIFTS)
   when '4' then mark_as_bought(GIFTS)
+  when '5' then ideas_etsy(GIFTS)
   when '0' then break
   else
     puts "Wrong choice!"

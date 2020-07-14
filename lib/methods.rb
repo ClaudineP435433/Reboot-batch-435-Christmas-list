@@ -1,6 +1,6 @@
 # require 'csv'
 # require_relative 'scrapper'
-require_relative 'interface'
+# require_relative 'interface'
 
 def display_menu
   puts "What action do you want to do ?"
@@ -44,14 +44,32 @@ end
 
 def delete_gift(gifts)
   # display gifts
+  puts "What do you want to delete ? Choose index"
+  display_gifts(gifts)
   # Ask User index of gift to delete & Stock index
+  index = gets.chomp.to_i - 1
   # Identifier gift to delete at index - 1
+  gifts.delete_at(index)
   # array.delete_at(index)
+  display_gifts(gifts)
 end
 
 def mark_as_bought(gifts)
   # display gifts
   # Ask User index of gift to mark as bought & Stock index
   # Identifier gift at index - 1
+  puts "Which gift have you bought ?"
+  display_gifts(gifts)
+  index = gets.chomp.to_i - 1
   # Update la valeur de clé bought dans le gift hash[:key] = new_value
+  gifts[index][:bought] = true
+  display_gifts(gifts)
+end
+
+def ideas_etsy(gifts)
+  # Ask User Keyword
+  # Scrap with keyword
+  # Display ideas
+  # Ask User to Choose the idea he wants to add / index
+  # Add gift_idea to gifts
 end
